@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.View
 import android.view.View.OnClickListener
 import android.widget.Button
+import android.widget.CheckBox
 import android.widget.EditText
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -21,7 +22,7 @@ class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        loginFactory = LoginFactory()
+        loginFactory = LoginFactory(this)
         loginViewModel = loginFactory.provideLoginViewModel()
         setContentView(R.layout.activity_login)
         setupView()
@@ -34,7 +35,8 @@ class LoginActivity : AppCompatActivity() {
         actionValidate.setOnClickListener {
             val userName = findViewById<EditText>(R.id.input_username).text.toString()
             val userPassword = findViewById<EditText>(R.id.input_password).text.toString()
-            val isValid = loginViewModel.validateClicked(userName, userPassword)
+            val rememberIsChecked = findViewById<CheckBox>(R.id.check_remember).isChecked
+            val isValid = loginViewModel.validateClicked(userName, userPassword, rememberIsChecked)
             if (isValid) {
                 //Snackbar siempre aparece abajo, pro debajo del teclado
                 Snackbar.make(
