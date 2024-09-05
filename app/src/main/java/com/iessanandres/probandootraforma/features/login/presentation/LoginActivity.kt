@@ -53,4 +53,12 @@ class LoginActivity : AppCompatActivity() {
             }
         }
     }
+
+    override fun onResume() {
+        super.onResume()
+        loginViewModel.onResumed()?.let { username ->
+            //username es no nulo
+            findViewById<EditText>(R.id.input_username).setText(username)
+        } // Si es nulo, ignoro lo anterior
+    }
 }
