@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- ScrollView es el scroll de l apantalla y solo puede tener un hijo -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="@dimen/small_spacing">
+
+        <TextView
+            android:id="@+id/titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/medium_spacing"
+            android:text="Colabora"
+            android:textAlignment="center"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/title"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/opcion1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/medium_spacing"
+            app:layout_constraintTop_toBottomOf="@+id/titulo">
+
+            <ImageView
+                android:id="@+id/foto9a4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBaseline_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:src="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/tit16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/small_spacing"
+                android:text="Hazte Socio"
+                android:textSize="@dimen/title2"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/foto9a4"
+                app:layout_constraintTop_toTopOf="@+id/foto9a4"
+                tools:layout_editor_absoluteY="10dp" />
+
+            <TextView
+                android:id="@+id/tit2c"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/small_spacing"
+                android:text="Colabora donando una cantidad fija durante un tiempo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/foto9a4"
+                app:layout_constraintTop_toBottomOf="@+id/tit16" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/opcion2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/medium_spacing"
+            app:layout_constraintTop_toBottomOf="@+id/opcion1">
+
+            <ImageView
+                android:id="@+id/foto9a3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBaseline_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:src="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/tit15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/small_spacing"
+                android:text="Hazte una donación"
+                android:textSize="@dimen/title2"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/foto9a3"
+                app:layout_constraintTop_toTopOf="@+id/foto9a3"
+                tools:layout_editor_absoluteY="10dp" />
+
+            <TextView
+                android:id="@+id/tit2a"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="10dp"
+                android:text="Ayudanos"
+                app:layout_constraintStart_toEndOf="@+id/foto9a3"
+                app:layout_constraintTop_toBottomOf="@+id/tit15"
+                tools:layout_editor_absoluteY="12dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/opcion3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/medium_spacing"
+            app:layout_constraintTop_toBottomOf="@+id/opcion2">
+
+            <ImageView
+                android:id="@+id/foto9a2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBaseline_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:src="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/tit11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/small_spacing"
+                android:text="Teaming 1€"
+                android:textSize="@dimen/title2"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/foto9a2"
+                app:layout_constraintTop_toTopOf="@+id/foto9a2"
+                tools:layout_editor_absoluteY="10dp" />
+
+            <TextView
+                android:id="@+id/tit2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:paddingLeft="10dp"
+                android:text="Colabora con nosotros con solo 1€ al mes"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/foto9a2"
+                app:layout_constraintTop_toBottomOf="@+id/tit11"
+                tools:layout_editor_absoluteY="12dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/opcion4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/medium_spacing"
+            app:layout_constraintTop_toBottomOf="@+id/opcion3">
+
+            <ImageView
+                android:id="@+id/foto9a1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBaseline_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:src="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/tit12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/small_spacing"
+                android:text="Apadrina"
+                android:textSize="@dimen/title2"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/foto9a1"
+                app:layout_constraintTop_toTopOf="@+id/foto9a1"
+                tools:layout_editor_absoluteY="10dp" />
+
+            <TextView
+                android:id="@+id/tit2b"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/small_spacing"
+                android:text="Apadrina a uno de nuestros amigos"
+                app:layout_constraintStart_toEndOf="@+id/foto9a1"
+                app:layout_constraintTop_toBottomOf="@+id/tit12"
+                tools:layout_editor_absoluteY="12dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

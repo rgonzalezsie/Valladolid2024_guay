@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- ScrollView es el scroll de l apantalla y solo puede tener un hijo -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="@dimen/small_spacing">
+
+        <ImageView
+            android:id="@+id/foto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/nombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:text="Rami"
+            android:textSize="@dimen/title"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/foto"
+            app:layout_constraintTop_toBottomOf="@+id/foto"/>
+        <TextView
+            android:id="@+id/descripcion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:textSize="@dimen/title2"
+            android:paddingTop="@dimen/small_spacing"
+            android:text="Un diamante sin pulir"
+            app:layout_constraintStart_toStartOf="@+id/nombre"
+            app:layout_constraintTop_toBottomOf="@+id/nombre"/>
+
+        <!-- icono sexo -->
+        <TextView
+            android:id="@+id/sexo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:textSize="@dimen/title2"
+            android:paddingTop="@dimen/small_spacing"
+            android:text="Un diamante sin pulir"
+            app:layout_constraintStart_toStartOf="@+id/descripcion"
+            app:layout_constraintTop_toBottomOf="@+id/descripcion"/>
+
+        <!-- icono fecha_nacimiento -->
+        <TextView
+            android:id="@+id/fecha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:textSize="@dimen/title2"
+            android:paddingTop="@dimen/small_spacing"
+            android:text="01-01-2024"
+            app:layout_constraintStart_toEndOf="@+id/sexo"
+            app:layout_constraintTop_toBottomOf="@+id/descripcion"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
